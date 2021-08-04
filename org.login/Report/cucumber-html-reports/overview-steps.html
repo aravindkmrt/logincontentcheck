@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Matrimony </td>
+      <td>04 Aug 2021, 17:24</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">multipleloginsteps.user_credentials()</td>
+              <td>28</td>
+              <td class="duration" data-value="1216035">0.001</td>
+              <td class="duration" data-value="1216035">0.002</td>
+              <td class="duration" data-value="34049000">0.034</td>
+              <td class="failed">89.29%</td>
+            </tr>
+            <tr>
+              <td class="location">multipleloginsteps.user_have_to_click_the_submit_button()</td>
+              <td>28</td>
+              <td class="duration" data-value="5701325446">5.701</td>
+              <td class="duration" data-value="5701325446">28.364</td>
+              <td class="duration" data-value="159637112500">2:39.637</td>
+              <td class="failed">96.43%</td>
+            </tr>
+            <tr>
+              <td class="location">multipleloginsteps.user_have_to_click_the_submit_button_second()</td>
+              <td>28</td>
+              <td class="duration" data-value="14293146625">14.293</td>
+              <td class="duration" data-value="14293146625">19.453</td>
+              <td class="duration" data-value="400208105500">6:40.208</td>
+              <td class="failed">92.86%</td>
+            </tr>
+            <tr>
+              <td class="location">multipleloginsteps.user_have_to_click_the_submit_button_third()</td>
+              <td>28</td>
+              <td class="duration" data-value="14132462750">14.132</td>
+              <td class="duration" data-value="14132462750">24.334</td>
+              <td class="duration" data-value="395708957000">6:35.708</td>
+              <td class="failed">89.29%</td>
+            </tr>
+            <tr>
+              <td class="location">multipleloginsteps.user_have_to_enter_into_comunity_matrimony_page()</td>
+              <td>28</td>
+              <td class="duration" data-value="1550724435">1.550</td>
+              <td class="duration" data-value="1550724435">3.711</td>
+              <td class="duration" data-value="43420284200">43.420</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">multipleloginsteps.user_have_to_enter_the_login_url()</td>
+              <td>28</td>
+              <td class="duration" data-value="15757165835">15.757</td>
+              <td class="duration" data-value="15757165835">24.965</td>
+              <td class="duration" data-value="441200643400">7:21.200</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">multipleloginsteps.user_have_to_enter_the_login_url_third()</td>
+              <td>28</td>
+              <td class="duration" data-value="12987871121">12.987</td>
+              <td class="duration" data-value="12987871121">23.030</td>
+              <td class="duration" data-value="363660391400">6:3.660</td>
+              <td class="failed">89.29%</td>
+            </tr>
+            <tr>
+              <td class="location">multipleloginsteps.user_have_to_enter_the_login_url_two()</td>
+              <td>28</td>
+              <td class="duration" data-value="15423459157">15.423</td>
+              <td class="duration" data-value="15423459157">31.879</td>
+              <td class="duration" data-value="431856856400">7:11.856</td>
+              <td class="failed">96.43%</td>
+            </tr>
+            <tr>
+              <td class="location">multipleloginsteps.user_have_to_enter_valid_and_password_and(String,String)</td>
+              <td>28</td>
+              <td class="duration" data-value="21620605589">21.620</td>
+              <td class="duration" data-value="21620605589">48.590</td>
+              <td class="duration" data-value="605376956500">10:5.376</td>
+              <td class="failed">96.43%</td>
+            </tr>
+            <tr>
+              <td class="location">multipleloginsteps.user_have_to_enter_valid_second_and_password_and(String,String)</td>
+              <td>28</td>
+              <td class="duration" data-value="9738968960">9.738</td>
+              <td class="duration" data-value="9738968960">17.850</td>
+              <td class="duration" data-value="272691130900">4:32.691</td>
+              <td class="failed">92.86%</td>
+            </tr>
+            <tr>
+              <td class="location">multipleloginsteps.user_have_to_enter_valid_third_and_password_and(String,String)</td>
+              <td>28</td>
+              <td class="duration" data-value="17173339710">17.173</td>
+              <td class="duration" data-value="17173339710">55.544</td>
+              <td class="duration" data-value="480853511900">8:0.853</td>
+              <td class="failed">89.29%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>11</td>
+            <td>308</td>
+            <td class="duration">11.670</td>
+            <td class="duration">10:5.376</td>
+            <td class="duration">59:54.647</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
